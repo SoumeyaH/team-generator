@@ -1,6 +1,17 @@
 class Intern extends Employee {
-  constructor() {
-    super();
+  constructor(_name, _id, _email, _school) {
+    super(_name, _id, _email);
+
+    this.school = _school;
+    this.role = "Intern";
+  }
+
+  getSchool() {
+    return this.school;
+  }
+
+  getRole() {
+    return this.role;
   }
 }
 
