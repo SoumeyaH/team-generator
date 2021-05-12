@@ -1,6 +1,5 @@
 const createManager = () => {
-  console.log("hello");
-  return { manager: "hello" };
+  return { manager: "bob" };
 };
 
 module.exports = createManager;
