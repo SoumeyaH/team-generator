@@ -1,0 +1,31 @@
+{
+  "name": "10_week_homework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "test:watch": "jest --verbose --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SoumeyaH/team-generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SoumeyaH/team-generator/issues"
+  },
+  "homepage": "https://github.com/SoumeyaH/team-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.0.0"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
