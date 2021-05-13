@@ -8,7 +8,7 @@ const createEngineer = async () => {
     {
       type: "input",
       message: "What is the enginner's github?",
-      name: "github",
+      name: "_github",
     },
   ];
 

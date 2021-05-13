@@ -8,7 +8,7 @@ const createIntern = async () => {
     {
       type: "input",
       message: "What school?",
-      name: "school",
+      name: "_school",
     },
   ];
 

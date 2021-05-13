@@ -1,6 +1,7 @@
 const Employee = require("./lib/employee");
 const baseEmployeeQs = require("./baseEmployeeQs");
 const getAnswers = require("./getAnswers");
+const Manager = require("./lib/manager");
 
 const createManager = async () => {
   const managerQuestions = [
@@ -8,13 +9,13 @@ const createManager = async () => {
     {
       type: "number",
       message: "What is the manager's office number?",
-      name: "officeNum",
+      name: "_officeNumber",
     },
   ];
 
   const managerAnswers = await getAnswers(managerQuestions);
-
-  const manager = new Employee(managerAnswers);
+  const manager = new Manager(managerAnswers);
+  console.log(manager, "manager");
 
   return manager;
 };

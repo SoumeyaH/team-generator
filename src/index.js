@@ -8,9 +8,7 @@ const init = async () => {
 
   const entireTeam = await getEntireTeam();
 
-  console.log(teamName, entireTeam);
-
-  const htmlTemplate = generateHTML();
+  const htmlTemplate = generateHTML(teamName, entireTeam);
 
   writeToFile(htmlTemplate);
 };

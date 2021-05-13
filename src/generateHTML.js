@@ -1,4 +1,5 @@
-const generateHTML = () => {
+const generateHTML = (teamName, entireTeam) => {
+  console.log(teamName, entireTeam);
   return `
   <!DOCTYPE html>
 <html lang="en">
