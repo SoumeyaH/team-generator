@@ -1,4 +1,3 @@
-const Employee = require("./lib/employee");
 const baseEmployeeQs = require("./baseEmployeeQs");
 const getAnswers = require("./getAnswers");
 const Manager = require("./lib/manager");

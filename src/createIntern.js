@@ -1,4 +1,4 @@
-const Employee = require("./lib/employee");
+const Intern = require("./lib/intern");
 const baseEmployeeQs = require("./baseEmployeeQs");
 const getAnswers = require("./getAnswers");
 
@@ -14,7 +14,7 @@ const createIntern = async () => {
 
   const internAnswers = await getAnswers(internQuestions);
 
-  const intern = new Employee(internAnswers);
+  const intern = new Intern(internAnswers);
 
   return intern;
 };

@@ -1,4 +1,4 @@
-const Employee = require("./lib/employee");
+const Engineer = require("./lib/engineer");
 const baseEmployeeQs = require("./baseEmployeeQs");
 const getAnswers = require("./getAnswers");
 
@@ -14,7 +14,7 @@ const createEngineer = async () => {
 
   const engineerAnswers = await getAnswers(engineerQuestions);
 
-  const engineer = new Employee(engineerAnswers);
+  const engineer = new Engineer(engineerAnswers);
 
   return engineer;
 };
