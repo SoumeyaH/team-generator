@@ -8,10 +8,9 @@ const init = async () => {
 
   // console.log(teamNameResponse);
 
-  const entireTeam = getEntireTeam();
+  const entireTeam = await getEntireTeam();
 
-  // const managerResponse = await createManager();
-  // console.log(managerResponse);
+  console.log(entireTeam);
 };
 
 init();

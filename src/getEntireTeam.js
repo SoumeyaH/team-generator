@@ -1,4 +1,7 @@
 const inquirer = require("inquirer");
+
+const createEngineer = require("./createEngineer");
+const createIntern = require("./createIntern");
 const createManager = require("./createManager");
 
 const getRestOfTeamInfo = async () => {
@@ -34,30 +37,29 @@ const getEntireTeam = async () => {
 
   entireTeam.push(managerInfo);
 
-  console.log("manager info", managerInfo);
-  console.log("team array", entireTeam);
-
-  const restOfTeamInfo = await getRestOfTeamInfo();
-
-  console.log(restOfTeamInfo);
-
-  const teamSelectionInProgress = true;
+  let teamSelectionInProgress = true;
 
   while (teamSelectionInProgress) {
+    const restOfTeamInfo = await getRestOfTeamInfo();
+
     switch (restOfTeamInfo.employeeType) {
       case "exit":
         teamSelectionInProgress = false;
         break;
 
       case "engineer":
-        console.log(restOfTeamInfo.employeeType);
+        const engineerInfo = await createEngineer();
+        entireTeam.push(engineerInfo);
         break;
 
       case "intern":
-        console.log(restOfTeamInfo.employeeType);
+        const internInfo = await createIntern();
+        entireTeam.push(internInfo);
         break;
     }
   }
+
+  return entireTeam;
 };
 
 module.exports = getEntireTeam;
