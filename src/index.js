@@ -1,16 +1,18 @@
 const getTeamName = require("./getTeamName");
-
-const createManager = require("./createManager");
 const getEntireTeam = require("./getEntireTeam");
+const generateHTML = require("./generateHTML");
+const writeToFile = require("./writeToFile");
 
 const init = async () => {
-  const teamNameResponse = await getTeamName();
-
-  // console.log(teamNameResponse);
+  const teamName = await getTeamName();
 
   const entireTeam = await getEntireTeam();
 
-  console.log(entireTeam);
+  console.log(teamName, entireTeam);
+
+  const htmlTemplate = generateHTML();
+
+  writeToFile(htmlTemplate);
 };
 
 init();
