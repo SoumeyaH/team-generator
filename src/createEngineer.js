@@ -7,7 +7,7 @@ const createEngineer = async () => {
     ...baseEmployeeQs,
     {
       type: "input",
-      message: "What is the enginner's github?",
+      message: "What is the Enginner's github?",
       name: "_github",
     },
   ];

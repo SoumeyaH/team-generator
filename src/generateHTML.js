@@ -3,7 +3,7 @@ const makeTeamInfoHTML = require("./makeTeamInfoHTML");
 const generateHTML = (teamName, entireTeam) => {
   const { teamName: teamTitle } = teamName;
   const htmlTeamInfo = makeTeamInfoHTML(entireTeam);
-  console.log(htmlTeamInfo);
+
   return `
   <!DOCTYPE html>
 <html lang="en">
