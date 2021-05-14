@@ -1,5 +1,9 @@
+const makeTeamInfoHTML = require("./makeTeamInfoHTML");
+
 const generateHTML = (teamName, entireTeam) => {
-  console.log(teamName, entireTeam);
+  const { teamName: teamTitle } = teamName;
+  const htmlTeamInfo = makeTeamInfoHTML(entireTeam);
+  console.log(htmlTeamInfo);
   return `
   <!DOCTYPE html>
 <html lang="en">
@@ -23,57 +27,11 @@ const generateHTML = (teamName, entireTeam) => {
   </head>
   <body>
     <header class="text-center p-4 bg-info">
-      <h1>Team Name</h1>
+      <h1>${teamTitle}</h1>
     </header>
 
     <div class="d-flex flex-wrap">
-      <div class="card m-4" style="width: 18rem">
-        <div class="card-header">
-          <h5 class="card-title">Bob</h5>
-          <h6 class="card-subtitle mb-2 text-muted">
-            <i class="fas fa-mug-hot"></i> Manager
-          </h6>
-        </div>
-        <div class="card-body">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID: 1</li>
-            <li class="list-group-item">Email: bob@restaurant.com</li>
-            <li class="list-group-item">Office Number: 555 6666</li>
-          </ul>
-        </div>
-      </div>
-  
-      <div class="card m-4" style="width: 18rem">
-        <div class="card-header">
-          <h5 class="card-title">Linda</h5>
-          <h6 class="card-subtitle mb-2 text-muted">
-            <i class="fas fa-glasses"></i></i> Engineer
-          </h6>
-        </div>
-        <div class="card-body">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID: 2</li>
-            <li class="list-group-item">Email: linda@restaurant.com</li>
-            <li class="list-group-item">GitHub: lindabelcher</li>
-          </ul>
-        </div>
-      </div>
-  
-      <div class="card m-4" style="width: 18rem">
-        <div class="card-header">
-          <h5 class="card-title">Tina</h5>
-          <h6 class="card-subtitle mb-2 text-muted">
-            <i class="fas fa-user-graduate"></i></i> Intern
-          </h6>
-        </div>
-        <div class="card-body">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID: 3</li>
-            <li class="list-group-item">Email: tina@restaurant.com</li>
-            <li class="list-group-item">School: wagstaff</li>
-          </ul>
-        </div>
-      </div>
+     ${htmlTeamInfo}
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"

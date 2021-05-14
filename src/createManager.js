@@ -14,7 +14,6 @@ const createManager = async () => {
 
   const managerAnswers = await getAnswers(managerQuestions);
   const manager = new Manager(managerAnswers);
-  console.log(manager, "manager");
 
   return manager;
 };
