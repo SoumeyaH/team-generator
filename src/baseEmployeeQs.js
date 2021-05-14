@@ -5,19 +5,13 @@ const baseEmployeeQs = [
     name: "_name",
   },
   {
-    type: "number",
+    type: "input",
     message: "What is the employee's ID number?",
     name: "_id",
-    // validation is stuck on NaN
-    // validate: (_id) => {
-    //   if (_id) {
-    //     // check if id already exists if it does
-    //     return _id;
-    //     // else return message `id is a repeat fix it b`
-    //   } else {
-    //     return `Please enter a valid number`;
-    //   }
-    // },
+
+    validate: (_id) => {
+      return /^[0-9]+$/.test(_id) || `error`;
+    },
   },
   {
     type: "input",
