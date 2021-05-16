@@ -32,7 +32,9 @@ const getRestOfTeamInfo = async () => {
 
 const getEntireTeam = async () => {
   const entireTeam = [];
-
+  //to do
+  // use entireteam as "cache"
+  // map through and check ids already exist
   const managerInfo = await createManager();
 
   entireTeam.push(managerInfo);
@@ -41,6 +43,10 @@ const getEntireTeam = async () => {
 
   while (teamSelectionInProgress) {
     const restOfTeamInfo = await getRestOfTeamInfo();
+
+    // to do
+    // destructor rest of team so
+    //restOfTeamInfo.employeeType -> employeeType
 
     switch (restOfTeamInfo.employeeType) {
       case "exit":
