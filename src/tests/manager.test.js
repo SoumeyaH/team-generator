@@ -7,7 +7,7 @@ describe("Manager", () => {
     _email: "g@g.com",
     _officeNumber: "g",
   };
-  // put in mock answers
+
   describe("constructor tests", () => {
     test("should construct manager object with with name, id, email, officeNumber and role", () => {
       const manager = new Manager(managerAnswers);

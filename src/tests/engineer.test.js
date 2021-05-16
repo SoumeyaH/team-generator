@@ -7,7 +7,7 @@ describe("Engineer", () => {
     _email: "g@g.com",
     _github: "g",
   };
-  // put in mock answers
+
   describe("constructor tests", () => {
     test("should construct engineer object with with name, id, email, github account and role", () => {
       const engineer = new Engineer(engineerAnswers);

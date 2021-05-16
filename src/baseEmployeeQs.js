@@ -12,10 +12,6 @@ const baseEmployeeQs = [
     validate: (_id) => {
       return /^[0-9]+$/.test(_id) || `error`;
     },
-    // when: (answers) => {
-    // answers.includes() t/f
-    //   return _id || `ID needs to be a unique value`;
-    // },
   },
   {
     type: "input",

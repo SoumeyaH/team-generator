@@ -7,7 +7,7 @@ describe("Intern", () => {
     _email: "g@g.com",
     _school: "g",
   };
-  // put in mock answers
+
   describe("constructor tests", () => {
     test("should construct intern object with with name, id, email, school name and role", () => {
       const intern = new Intern(internAnswers);
