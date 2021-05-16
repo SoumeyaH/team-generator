@@ -14,8 +14,6 @@ const createEngineer = async () => {
 
   const engineerAnswers = await getAnswers(engineerQuestions);
 
-  // destructor answeres here then pass into to function
-  console.log(engineerAnswers);
   const engineer = new Engineer(engineerAnswers);
 
   return engineer;

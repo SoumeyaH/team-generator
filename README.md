@@ -16,7 +16,7 @@
 
 ## Demo Video
 
-[Click here](https://soumeyah.github.io/daily_work_scheduler/) to see a short demonstration and explanation of the app.
+[Click here](https://drive.google.com/file/d/1nwmKpO2XJhA-1XYu5SvUGQ1lEhfqhs-C/view) to see a short demonstration and explanation of the app.
 
 ## Getting Started
 
